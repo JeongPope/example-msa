@@ -1,76 +1,65 @@
 [
     {
-        "id": 1,
         "title": "Evil dead 2013",
         "image": "1.jpg",
         "alt": "Mountains",
         "desc": "This is description of evil dead 2013"
     },
     {
-        "id": 2,
         "title": "Annabelle Creation (2017)",
         "image": "2.jpg",
         "alt": "Lights",
         "desc": "This is description of Annabelle Creation"
     },
     {
-        "id": 3,
         "title": "Insidious The Last Key (2018)",
         "image": "3.jpg",
         "alt": "Nature",
         "desc": "This is description of Insidious The Last Key"
     },
     {
-        "id": 4,
         "title": "The Conjuring 2 2016",
         "image": "4.jpg",
         "alt": "Car",
         "desc": "This is description of The Conjuring 2 2016"
     },
     {
-        "id": 5,
         "title": "Down of Justice",
         "image": "5.jpg",
         "alt": "Car",
         "desc": "This is description of Down of Justice"
     },
     {
-        "id": 6,
         "title": "Suicide Squad",
         "image": "6.jpg",
         "alt": "Car",
         "desc": "This is description of Suicide Squad"
     },
     {
-        "id": 7,
         "title": "John Wick Chapter 1",
         "image": "7.jpg",
         "alt": "People",
         "desc": "This is description of John Wick Chapter 1"
     },
     {
-        "id": 8,
         "title": "John Wick Chapter 2",
         "image": "8.jpg",
         "alt": "People",
         "desc": "This is description of John Wick Chapter 2"
     },
     {
-        "id": 9,
         "title": "John Wick Chapter 3",
         "image": "9.jpg",
         "alt": "People",
         "desc": "This is description of John Wick Chapter 3"
     },
     {
-        "id": 10,
         "title": "Lost In Space S2",
         "image": "10.jpg",
         "alt": "People",
         "desc": "This is description of Lost In Space S2"
     },
     {
-        "id": 11,
         "title": "Pacific Rim 2013",
         "image": "11.jpg",
         "alt": "People",

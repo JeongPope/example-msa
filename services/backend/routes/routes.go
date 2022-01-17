@@ -2,10 +2,21 @@ package routes
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
+
+var (
+	port = ":"
+)
+
+func init() {
+	envPort := os.Getenv("BACKEND_PORT")
+
+	port += envPort
+}
 
 func Serve() {
 	e := echo.New()
@@ -26,8 +37,8 @@ func Serve() {
 	// Specific movie
 	e.GET("/api/movie/:id", getMovie)
 	e.POST("/api/movie", createMovie)
-	// e.PUT("/api/movie", updateMovie)
-	// e.DELETE("/api/movie/:id", deleteMovie)
+	e.PUT("/api/movie/:id", updateMovie)
+	e.DELETE("/api/movie/:id", deleteMovie)
 
-	e.Start(":3333")
+	e.Start(port)
 }

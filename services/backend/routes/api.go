@@ -20,7 +20,7 @@ func getMovie(c echo.Context) error {
 
 	id, err := strconv.Atoi(param)
 	if err != nil {
-		c.Echo().Logger.Error(err.Error())
+		//		c.Echo().Logger.Error(err.Error())
 
 		return echo.NewHTTPError(http.StatusBadRequest, "invalid syntax")
 	}
@@ -49,10 +49,47 @@ func createMovie(c echo.Context) error {
 	return c.JSON(http.StatusOK, movie)
 }
 
-// func updateMovie(c echo.Context) error {
+func updateMovie(c echo.Context) error {
+	param := c.Param("id")
 
-// }
+	id, err := strconv.Atoi(param)
+	if err != nil {
+		c.Echo().Logger.Error(err.Error())
 
-// func deleteMovie(c echo.Context) error {
+		return echo.NewHTTPError(http.StatusBadRequest, "invalid syntax")
+	}
 
-// }
+	m := model.Movie{}
+	if err := c.Bind(&m); err != nil {
+		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
+	}
+
+	movie, err := movie.UpdateMovie(id, m)
+	if err != nil {
+		c.Echo().Logger.Error(err.Error())
+
+		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
+	}
+
+	return c.JSON(http.StatusOK, movie)
+}
+
+func deleteMovie(c echo.Context) error {
+	param := c.Param("id")
+
+	id, err := strconv.Atoi(param)
+	if err != nil {
+		c.Echo().Logger.Error(err.Error())
+
+		return echo.NewHTTPError(http.StatusBadRequest, "invalid syntax")
+	}
+
+	err = movie.DeleteMovie(id)
+	if err != nil {
+		c.Echo().Logger.Error(err.Error())
+
+		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
+	}
+
+	return c.JSON(http.StatusOK, "success")
+}

@@ -3,7 +3,6 @@ package movie
 import (
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io/ioutil"
 
 	"github.com/jeongpope/example-msa/services/backend/model"
@@ -38,26 +37,40 @@ func GetMovie(id int) (movie model.Movie, err error) {
 }
 
 func CreateMovie(m model.Movie) (movie model.Movie, err error) {
-	fmt.Println(m)
 	movies = append(movies, m)
 
 	len := len(movies)
-	movies[len-1].ID = len
 
 	return movies[len-1], nil
 }
 
-// func UpdateMovie(id int) (movie model.Movie, err error) {
-// 	if id > len(movies) || id <= 0 {
-// 		err = errors.New("index out of range")
-// 		return
-// 	}
+func UpdateMovie(id int, m model.Movie) (movie model.Movie, err error) {
+	if id > len(movies) || id <= 0 {
+		err = errors.New("index out of range")
+		return
+	}
 
-// }
+	movies[id-1] = m
 
-// func DeleteMovie(id int) (movie model.Movie, err error) {
-// 	if id > len(movies) || id <= 0 {
-// 		err = errors.New("index out of range")
-// 		return
-// 	}
-// }
+	return movies[id-1], nil
+}
+
+func DeleteMovie(id int) (err error) {
+	err = checkID(id)
+	if err != nil {
+		return
+	}
+
+	movies = append(movies[:id-1], movies[id:]...)
+
+	return
+}
+
+func checkID(id int) (err error) {
+	if id > len(movies) || id <= 0 {
+		err = errors.New("index out of range")
+		return
+	}
+
+	return nil
+}
