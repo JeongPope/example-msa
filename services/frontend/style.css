@@ -1,41 +1,36 @@
-
- * {
-	 margin:0;
-	 padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
- body{
-    background-color: black;
-    padding: 20px;
-    font-family: Arial;
-    }
+body {
+  background-color: black;
+  padding: 20px;
+  font-family: Arial;
+}
 
-   h1,h2{
-    color: green;
-    text-align: center;
-   }
+h1,
+h2 {
+  color: green;
+  text-align: center;
+}
 
-   nav{
-    color: green
-  
- }
+nav {
+  color: green;
+}
 /* 
    p1{
     text-align: center;
     color: green;
    } */
-  
 
- 
-.upspace{
+.upspace {
   padding-top: 150px;
 }
-.card{
-
+.card {
   align-content: center;
   border-radius: 50%;
-  
 }
 
 .container {
@@ -45,14 +40,14 @@
   margin-left: auto;
   margin-right: auto;
   width: 30%;
-  border-radius: 70%
+  border-radius: 70%;
 }
 
 .image {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 70%
+  border-radius: 70%;
 }
 
 .overlay {
@@ -64,13 +59,13 @@
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
   background-color: green;
 }
 
 .container:hover .overlay {
   opacity: 1;
-  border-radius: 70%
+  border-radius: 70%;
 }
 
 .text {
@@ -101,22 +96,17 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-
 }
-
 
 li a:hover {
   background-color: white;
-
-} 
+}
 
 /* Center website */
 .main {
   max-width: 1000px;
   margin: auto;
 }
-
-
 
 .row {
   margin: 8px -16px;
@@ -132,14 +122,14 @@ li a:hover {
 .column {
   float: left;
   width: 33.33%;
-  display: none; 
+  display: none;
   padding: 20px;
   /* Hide columns by default */
 }
 
 /* Clear floats after rows */
 .row:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -163,49 +153,60 @@ li a:hover {
   background-color: green;
   text-align: center;
   position: center;
-
 }
-button{
-	
+button {
   margin: auto;
-
 }
-button:hover{
-	background-color:balck;
-color:white;
+button:hover {
+  background-color: balck;
+  color: white;
 }
-
 
 /* Add a dark background color to the active button */
 .btn.active {
   background-color: green;
-   color: black;
-   padding-left: 50px;
-   width: 100%;
+  color: black;
+  padding-left: 50px;
+  width: 100%;
 }
-.showbtn{
-	padding-left: 80px;
-
-
+.showbtn {
+  padding-left: 80px;
 }
 /*code changes by {SD} is from here*/
-.headh1{
-    text-align: center;
-} 
-.c2{
+.headh1 {
+  text-align: center;
+}
+.c2 {
   text-align: center;
   padding-bottom: 20px;
   color: green;
   text-align: center;
   padding-top: 10px;
- }
- header h1 {
-   margin-top:40px;
- }
- h4{
-   text-align: center;
-   text-transform:capitalize;
- }
- /* .cards .column nature{
+}
+header h1 {
+  margin-top: 40px;
+}
+h4 {
+  text-align: center;
+  text-transform: capitalize;
+}
+/* .cards .column nature{
    box-shadow: 2px 2px 4px green;
  } */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.show {
+  width: 100%;
+  height: 100%;
+}
