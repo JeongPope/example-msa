@@ -20,7 +20,7 @@ func getMovie(c echo.Context) error {
 
 	id, err := strconv.Atoi(param)
 	if err != nil {
-		//		c.Echo().Logger.Error(err.Error())
+		c.Echo().Logger.Error(err.Error())
 
 		return echo.NewHTTPError(http.StatusBadRequest, "invalid syntax")
 	}
