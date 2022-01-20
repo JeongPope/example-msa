@@ -1,7 +1,7 @@
 getMovie()
 
 function getMovie() {
-    let url = 'http://localhost:8880/api/movie/'
+    let url = 'http://backend:8880/api/movie/'
     let val = localStorage.getItem('classlion')
     url += val
 

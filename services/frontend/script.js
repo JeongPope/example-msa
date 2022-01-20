@@ -4,7 +4,7 @@ filterSelection("all")
 getMovies()
 
 function getMovies() {
-  fetch('http://localhost:8880/api/movies')
+  fetch('http://backend:8880/api/movies')
     .then(function (response) {
       response.json().then(function (json) {
         for (i = 0; i < json.length; i++) {
