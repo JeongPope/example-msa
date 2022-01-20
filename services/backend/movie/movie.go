@@ -26,10 +26,7 @@ func GetMovies() []model.Movie {
 }
 
 func GetMovie(id int) (movie model.Movie, err error) {
-	if id > len(movies) || id <= 0 {
-		err = errors.New("index out of range")
-		return
-	}
+	err = checkID(id)
 
 	movie = movies[id-1]
 
@@ -45,9 +42,9 @@ func CreateMovie(m model.Movie) (movie model.Movie, err error) {
 }
 
 func UpdateMovie(id int, m model.Movie) (movie model.Movie, err error) {
-	if id > len(movies) || id <= 0 {
-		err = errors.New("index out of range")
-		return
+	err = checkID(id)
+	if err != nil {
+		return model.Movie{}, err
 	}
 
 	movies[id-1] = m
