@@ -1,0 +1,7 @@
+apiVersion: v1
+type: kubernetes.io/dockerconfigjson
+kind: Secret
+metadata:
+  name: harbor
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyIxNzIuMzAuNC44MyI6eyJ1c2VybmFtZSI6ImNsYXNzbGlvbiIsInBhc3N3b3JkIjoiQ2xhc3NsaW9uMSEiLCJhdXRoIjoiWTJ4aGMzTnNhVzl1T2tOc1lYTnpiR2x2YmpFaCJ9fX0=
